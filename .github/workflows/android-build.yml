@@ -34,9 +34,9 @@ jobs:
         run: |
           ./gradlew assembleRelease
 
-      # Upload APK as an artifact (bisa diunduh setelah build selesai)
+      # Upload APK
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
           name: android-apk
-          path: app/build/outputs/apk/release/app-release.apk
+          path: app/build/outputs/apk/release/*.apk
